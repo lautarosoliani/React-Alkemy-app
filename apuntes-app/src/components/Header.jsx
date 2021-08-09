@@ -7,15 +7,16 @@ const Header = () => {
 
     let mensaje
     if (edad >= 18) {
-        mensaje = `tu edad es ${edad} y eres mayor de edad.`
+        mensaje = `Tu edad es ${edad} y eres mayor de edad.`
     } else {
-        mensaje = `tu edad es ${edad} y eres menor de edad.`
+        mensaje = `Tu edad es ${edad} y eres menor de edad.`
     }
 
     return (
-        <h1>
-            {helloFromHeader}, {mensaje}
-        </h1>
+        <>
+            <h1>{helloFromHeader}</h1>
+            <h2>{mensaje}</h2>
+        </>
     )
 }
 

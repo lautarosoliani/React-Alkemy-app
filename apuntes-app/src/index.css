@@ -38,6 +38,7 @@ h1 span {
 }
 h1 {
     font-size: 3rem;
+    text-decoration: underline;
 }
 h2 {
     font-size: 2.4rem;
