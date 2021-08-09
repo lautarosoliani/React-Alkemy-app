@@ -10,9 +10,12 @@ const FlujoDeDatosEntreComponentes = ({ ejemplo }) => {
                     componentes, por ejemplo, desde App.js hacia los
                     components.js se puede hacer dandole una propiedad como si
                     fuera un class de CSS. Pueden ser booleanos, numeros,
-                    strings, e incluso funciones. Se llaman PROPS y junto con
-                    DESTRUCTURING como buena practica para no poner 'props. ...'
-                    cada vez que lo utilizo
+                    strings, e incluso funciones.
+                </p>
+                <p>
+                    Se llaman PROPS y se utilizan junto con DESTRUCTURING como
+                    buena practica para no poner 'props. ...' cada vez que lo
+                    utilizo
                 </p>
                 <p>{ejemplo}</p>
                 <p>
