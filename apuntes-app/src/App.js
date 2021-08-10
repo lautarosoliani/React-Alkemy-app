@@ -56,14 +56,27 @@ function App() {
             ))}
 
             <h2>
-                Para modificar la lista de heroes creo el 2do useState llamado
-                'selecciondeheroes' y su funcion 'modificarSeleccionDeHeroes'
-                los agrego de movida a las props del componente 'Heroe' que use
-                en el primer useState. Luego hago destructuring y paso ambos al
-                componente Heroe.js. De igual manera sumo a las props y al
-                destructuring una tercer prop llamada 'heores', que voy a usar
-                en Heroe.js para usar el metodo 'filter' e identificar el heroe
-                seleccionado
+                <p>
+                    Para modificar la lista de heroes creo el 2do useState
+                    llamado 'selecciondeheroes' y su funcion
+                    'modificarSeleccionDeHeroes' los agrego de movida a las
+                    props del componente 'Heroe' que use en el primer useState.
+                    Luego hago destructuring y paso ambos al componente
+                    Heroe.js. De igual manera sumo a las props y al
+                    destructuring una tercer prop llamada 'heores', que voy a
+                    usar en Heroe.js para usar el metodo 'filter' e identificar
+                    el heroe seleccionado
+                </p>
+                <p>
+                    Al lado del '.filter' agregar [0], ademas, debajo pongo:
+                    modificarSeleccionDeHeroes([...selecciondeheroes, heroe]),
+                    lo que permite que cada vez que se hace 'onClick' se
+                    almacene en el segundo State el heroe correspondiente al que
+                    se hizo click. Dato importante: nunca usar '.push' porque no
+                    se debe modificar el State directamente sino a traves de su
+                    funcion del useState. Otro dato, hay muchas mas formas de
+                    hacer esto, esta es una de las simples pero hay muchas mas
+                </p>
             </h2>
         </>
     )

@@ -14,7 +14,7 @@ const Heroe = ({
     // va a crear un array nuevo con ese heroe
     const seleccionarHeroe = (id) => {
         const heroe = heroes.filter((heroe) => heroe.id === id)[0]
-        modificarSeleccionDeHeroes(heroe)
+        modificarSeleccionDeHeroes([...selecciondeheroes, heroe])
     }
 
     return (
