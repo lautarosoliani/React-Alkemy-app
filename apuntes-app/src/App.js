@@ -7,12 +7,16 @@ import State from "./components/State"
 import Heroe from "./components/Heroe"
 
 function App() {
+    //crear listado de heroes
     const [heroes, guardarHeroes] = useState([
-        { id: 1, nombre: "primero", precio: 10 },
-        { id: 2, nombre: "segundo", precio: 20 },
-        { id: 3, nombre: "tercero", precio: 30 },
-        { id: 4, nombre: "cuarto", precio: 40 },
+        { id: 1, nombre: "primero" },
+        { id: 2, nombre: "segundo" },
+        { id: 3, nombre: "tercero" },
+        { id: 4, nombre: "cuarto" },
     ])
+
+    //useState para agregar, quitar y nose si editar
+    const [selecciondeheroes, modificarSeleccionDeHeroes] = useState([])
 
     return (
         <>
@@ -40,19 +44,26 @@ function App() {
                     'consola'
                 </p>
             </h2>
-            <h1>Lista de Heroes:</h1>
+            <h1>Lista de Heroes: 'useState de heroes'</h1>
             {heroes.map((heroe) => (
-                <Heroe key={heroe.id} heroe={heroe} />
+                <Heroe
+                    key={heroe.id}
+                    heroe={heroe}
+                    heroes={heroes}
+                    selecciondeheroes={selecciondeheroes}
+                    modificarSeleccionDeHeroes={modificarSeleccionDeHeroes}
+                />
             ))}
 
             <h2>
-                Para crear el button es importante el evento onClick, y que su
-                llamado a la funcion no sea directo sino primero unos parentesis
-                y luego la arrow func que al final tenga unos parentesis para
-                ejecutarla. Ademas sobre el Return crear un Const con el nombre
-                del evento al clickear, en este caso 'verDetalles'. Ahora
-                importante agregar 3 veces 'id' o 'nombre' dentro de los
-                parentesis
+                Para modificar la lista de heroes creo el 2do useState llamado
+                'selecciondeheroes' y su funcion 'modificarSeleccionDeHeroes'
+                los agrego de movida a las props del componente 'Heroe' que use
+                en el primer useState. Luego hago destructuring y paso ambos al
+                componente Heroe.js. De igual manera sumo a las props y al
+                destructuring una tercer prop llamada 'heores', que voy a usar
+                en Heroe.js para usar el metodo 'filter' e identificar el heroe
+                seleccionado
             </h2>
         </>
     )
