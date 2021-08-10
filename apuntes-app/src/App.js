@@ -5,6 +5,7 @@ import FlujoDeDatosEntreComponentes from "./components/FlujoDeDatosEntreComponen
 import Hooks from "./components/Hooks"
 import State from "./components/State"
 import Heroe from "./components/Heroe"
+import CarritoDeHeroes from "./components/CarritoDeHeroes"
 
 function App() {
     //crear listado de heroes
@@ -54,7 +55,7 @@ function App() {
                     modificarSeleccionDeHeroes={modificarSeleccionDeHeroes}
                 />
             ))}
-
+            <CarritoDeHeroes selecciondeheroes={selecciondeheroes} />
             <h2>
                 <p>
                     Para modificar la lista de heroes creo el 2do useState
@@ -67,6 +68,7 @@ function App() {
                     usar en Heroe.js para usar el metodo 'filter' e identificar
                     el heroe seleccionado
                 </p>
+                <br />
                 <p>
                     Al lado del '.filter' agregar [0], ademas, debajo pongo:
                     modificarSeleccionDeHeroes([...selecciondeheroes, heroe]),
@@ -76,6 +78,17 @@ function App() {
                     se debe modificar el State directamente sino a traves de su
                     funcion del useState. Otro dato, hay muchas mas formas de
                     hacer esto, esta es una de las simples pero hay muchas mas
+                </p>
+                <br />
+                <p>
+                    Nuevo componente: Carrito de Heroes. Creo nueva pagina
+                    llamada CarritoDeHeroes.js, la importo en App.js, se le pasa
+                    la prop selecciondeheroes. En CarritoDeHeroes.js se hace el
+                    mismo .map del primer useState pero en vez de 'heroes' va
+                    selecciondeheroes y las props son las dos primeras calcadas
+                    {/* key={heroe.id}
+                        heroe={heroe} */}
+                    . Luego coloco el ternario 'no hay heroes en el carrito'
                 </p>
             </h2>
         </>
