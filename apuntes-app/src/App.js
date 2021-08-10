@@ -55,7 +55,10 @@ function App() {
                     modificarSeleccionDeHeroes={modificarSeleccionDeHeroes}
                 />
             ))}
-            <CarritoDeHeroes selecciondeheroes={selecciondeheroes} />
+            <CarritoDeHeroes
+                selecciondeheroes={selecciondeheroes}
+                modificarSeleccionDeHeroes={modificarSeleccionDeHeroes}
+            />
             <h2>
                 <p>
                     Para modificar la lista de heroes creo el 2do useState
@@ -88,7 +91,8 @@ function App() {
                     selecciondeheroes y las props son las dos primeras calcadas
                     {/* key={heroe.id}
                         heroe={heroe} */}
-                    . Luego coloco el ternario 'no hay heroes en el carrito'
+                    . Luego coloco el ternario '? no hay heroes en el carrito :
+                    selecciondeheroes.map'
                 </p>
             </h2>
         </>
@@ -96,3 +100,25 @@ function App() {
 }
 
 export default App
+
+// GUARDAR en otro lado!!!!!
+
+// TERNARIO PARA DESAPARECER, POR EJEMPLO, BOTONES AL DUPLICAR COMPONENTES
+// {selecciondeheroes.length === 0 ? (
+//     <p>No hay heroes en el carrito</p>
+// ) : (
+//     selecciondeheroes.map((heroe) => (
+//         <Heroe key={heroe.id} heroe={heroe} />
+//     ))
+// )}
+//
+//
+//
+// .MAP PARA ITERAR SOBRE UN ARRAY
+{
+    /* <h1>Lista de Heroes: 'useState de heroes'</h1>
+            {heroes.map((heroe) => (
+                <Heroe
+                    key={heroe.id}
+                    heroe={heroe} */
+}

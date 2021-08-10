@@ -16,14 +16,26 @@ const Heroe = ({
         const heroe = heroes.filter((heroe) => heroe.id === id)[0]
         modificarSeleccionDeHeroes([...selecciondeheroes, heroe])
     }
+    //eliminar heroe de la lista
+    const eliminarHeroe = (id) => {
+        const heroes = selecciondeheroes.filter((heroe) => heroe.id !== id)
+        //colocar los heroes en el State
+        modificarSeleccionDeHeroes(heroes)
+    }
 
     return (
         <>
             <h1>{nombre}</h1>
             <h2>Nombre, imagen, powerStats, ver detalle, eliminar</h2>
-            <button type="button" onClick={() => seleccionarHeroe(id)}>
-                Detalles
-            </button>
+            {heroes ? (
+                <button type="button" onClick={() => seleccionarHeroe(id)}>
+                    Detalles
+                </button>
+            ) : (
+                <button type="button" onClick={() => eliminarHeroe(id)}>
+                    Eliminar
+                </button>
+            )}
         </>
     )
 }
