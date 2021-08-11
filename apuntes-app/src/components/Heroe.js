@@ -12,7 +12,7 @@ const Heroe = ({
 
     // '.filter' lo que hace es: le voy a pasar un ID, va a iterear y cuando lo encuentre
     // va a crear un array nuevo con ese heroe
-    const seleccionarHeroe = (id) => {
+    const agregarHeroeAlCarrito = (id) => {
         const heroe = heroes.filter((heroe) => heroe.id === id)[0]
         modificarSeleccionDeHeroes([...selecciondeheroes, heroe])
     }
@@ -28,8 +28,8 @@ const Heroe = ({
             <h1>{nombre}</h1>
             <h2>Nombre, imagen, powerStats, ver detalle, eliminar</h2>
             {heroes ? (
-                <button type="button" onClick={() => seleccionarHeroe(id)}>
-                    Detalles
+                <button type="button" onClick={() => agregarHeroeAlCarrito(id)}>
+                    Agregar al carrito
                 </button>
             ) : (
                 <button type="button" onClick={() => eliminarHeroe(id)}>

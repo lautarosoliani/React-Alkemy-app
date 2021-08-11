@@ -358,6 +358,7 @@ aside {
     position: fixed;
     top: 0;
     right: 0;
-    background-color: #e1e1e1;
+    background-color: white;
     width: 400px;
+    border: solid black 1px;
 }
