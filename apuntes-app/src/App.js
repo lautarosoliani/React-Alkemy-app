@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Heroe from "./components/Heroe"
 import CarritoDeHeroes from "./components/CarritoDeHeroes"
+import Button from "./components/Button"
 
 function App() {
     //crear listado de heroes
@@ -18,6 +19,7 @@ function App() {
 
     return (
         <>
+            <Button />
             <h1>Hola desde App.js</h1>
             <h1>Lista de Heroes: 'useState de heroes'</h1>
             {heroes.map((heroe) => (
@@ -79,8 +81,8 @@ export default App
 //         'consola'
 //     </p>
 // </h2>
-{
-    /* <h2>
+
+/* <h2>
                     <p>
                         Para modificar la lista de heroes creo el 2do useState
                         llamado 'selecciondeheroes' y su funcion
@@ -119,4 +121,3 @@ export default App
                     <br />
                     <p></p>
     </h2> */
-}
