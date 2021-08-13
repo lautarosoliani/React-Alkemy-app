@@ -4,7 +4,7 @@ const Button = () => {
     //BUTTON PARA API
     const consultarAPI = async () => {
         const api = await fetch(
-            "https://superheroapi.com/api/access-token/character-id"
+            "https://superheroapi.com/api/access-token/search/batman"
         )
         const frase = await api.json()
         console.log(frase[0])
