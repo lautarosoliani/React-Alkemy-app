@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import Heroe from "./components/Heroe"
-import CarritoDeHeroes from "./components/CarritoDeHeroes"
-import Button from "./components/Button"
+import Heroe from "./SinUsar/Heroe"
+import CarritoDeHeroes from "./SinUsar/CarritoDeHeroes"
+import Button from "./SinUsar/Button"
 
 function App() {
     //crear listado de heroes
